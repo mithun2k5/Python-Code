@@ -1,5 +1,0 @@
-def ispangram(str1):
-    alphabet = "abcdefghijklmnopqrstuvwxyz" 
-    alphabet = set(alphabet)
-    str1_alphabet = set(str1.lower().replace(" ",""))
-    return str1_alphabet == alphabet
