@@ -1,24 +1,28 @@
-#Binary to Decimal and Decimal to binary converter
+## Binary to Decimal and Decimal to binary converter
 
-def binary_converter():
-    decimal = int(raw_input("Give Decimal Input: "))
-    value = ''"
-    print "\nBinary value is:: "
-    if decimal == 0:
-        return decimal
-    while (decimal > 0):
+decimal = int(input("Give Decimal Input: "))
+
+def binary_converter(decimal):
+    value = ""
+    while (decimal > 1):
         value = value + str(decimal % 2)
-        decimal = decimal/2
-    return int(value[::-1])
+        decimal = int(decimal/2)
+    if decimal == 0:
+        value = value + str(decimal)
+    elif decimal == 1:
+        value = value + str(decimal)
+    new_value = value[::-1]
+    value1 = "Binary value is:: " + new_value
+    return value1
 
-binary_converter()
-
-Give Decimal Input: 2
-
-Binary value is:: 
+## Output
+decimal = int(input("Give Decimal Input: "))
+2
+a=binary_converter(decimal)
+print(a)
 10
 
-#Decimal to binary converter
+## Decimal to binary converter
 
 def decimal_converter():
     binary = raw_input("Give Binary Input: ")
@@ -26,7 +30,7 @@ def decimal_converter():
     if len(binary) == 1:
         return int(binary)
     else:
-        value = ''"
+        value = ""
         str_value = " ".join(binary)
         new_value = str_value.split()
         length=len(new_value)
