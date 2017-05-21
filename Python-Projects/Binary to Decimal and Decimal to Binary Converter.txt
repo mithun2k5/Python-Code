@@ -1,4 +1,4 @@
-## Binary to Decimal and Decimal to binary converter
+## Decimal to binary converter
 
 decimal = int(input("Give Decimal Input: "))
 
@@ -20,13 +20,13 @@ decimal = int(input("Give Decimal Input: "))
 2
 a=binary_converter(decimal)
 print(a)
-10
+Binary value is:: 10
 
-## Decimal to binary converter
+## Binary to decimal converter
 
-def decimal_converter():
-    binary = raw_input("Give Binary Input: ")
-    print "\nDecimal value is:: "
+binary = input("Give Binary Input: ")
+
+def decimal_converter(binary):
     if len(binary) == 1:
         return int(binary)
     else:
@@ -40,10 +40,12 @@ def decimal_converter():
             value = value + (int(new_value[i])*pow(2,length-1))
             i = i + 1
             length = length -1
+    value = "Decimal valus is :: " + str(value)
     return value
 
-#decimal_converter()
-
-Give Binary Input: 1111
-Decimal value is:: 
-15
+## Output
+binary = input("Give Binary Input: ")
+1000
+b=decimal_converter(binary)
+print(b)
+Decimal valus is:: 8
